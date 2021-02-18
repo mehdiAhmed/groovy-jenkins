@@ -10,7 +10,7 @@ pipeline {
              steps {
                 echo 'LOAD GROOVY SCRIPT'
                 script{
-                     grv = load "script.groovy"
+                    grv = load "script.groovy"
                  }
             }
         }
