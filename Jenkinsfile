@@ -3,7 +3,7 @@ def grv
 pipeline {
     agent any
     parameters {
-        choice(name: 'VERSION', defaultValue: '1.1', description: 'The version')
+        choice(name: 'VERSION', choices: ['1.1.0', '1.2.0'], description: 'The version')
     }
     stages {
         stage('init') {
