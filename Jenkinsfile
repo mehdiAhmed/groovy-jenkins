@@ -17,7 +17,8 @@ pipeline {
         stage('Build') {
             steps {
                 script{
-                    grv.buildApp()
+                    def person = new client(name: 'Betclic', age: 2)
+                    grv.buildApp(person)
                 }
             }
         }

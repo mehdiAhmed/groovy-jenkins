@@ -2,21 +2,27 @@
 class Client {                                  
     String name
     Integer age
+	
+	def getName() {
+		return name
+	}
 }
-def person = new client(name: 'Betclic', age: 2)
+def person = new Client(name: 'Betclic', age: 2)
 
-def buildApp(){
-    println "Hello from the shebang ${person.name}"
-    echo "building the application
+def buildApp(Client p){
+    println "le clien est ${p.getName()}"
+    println "building the application"
 }
 
 def testApp(){
-    echo 'Testying the application'
+    println 'Testying the application'
 }
 
 def deployApp(){
-    echo 'deploying the application'
-    echo "deploying version: ${params.VERSION}"
+    println 'deploying the application'
+    println "deploying version: ${params.VERSION}"
 }
+
+//buildApp(person)
 
 return this
