@@ -4,7 +4,7 @@ pipeline {
     agent any
     parameters {
         choice(name: 'VERSION', choices: ['1.1.0', '1.2.0'], description: 'The version')
-        string(name: 'CLIENT', defaultValue:'Betclic', description: 'name of the client')
+        string(name: 'CLIENT', defaultValue:'Cdiscount', description: 'name of the client')
     }
     stages {
         stage('init') {
