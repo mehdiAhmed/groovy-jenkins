@@ -7,10 +7,10 @@ class Client {
 		return name
 	}
 }
-def person = new Client(name: 'Betclic', age: 2)
+def person = new Client(name: "${params.CLIENT}", age: 2)
 
-def buildApp(Client p){
-    echo "le clien est ${p.getName()}"
+def buildApp(){
+    echo "le client est ${params.CLIENT}"
     echo "building the application"
 }
 

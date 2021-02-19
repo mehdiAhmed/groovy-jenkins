@@ -4,6 +4,7 @@ pipeline {
     agent any
     parameters {
         choice(name: 'VERSION', choices: ['1.1.0', '1.2.0'], description: 'The version')
+        client(name: 'CLIENT', default:'Betclic', description: 'name of the client')
     }
     stages {
         stage('init') {
@@ -17,8 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 script{
-                    def person = new client(name: 'Betclic', age: 2)
-                    grv.buildApp(person)
+                    grv.buildApp()
                 }
             }
         }
