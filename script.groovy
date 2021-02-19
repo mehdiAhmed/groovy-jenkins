@@ -10,17 +10,17 @@ class Client {
 def person = new Client(name: 'Betclic', age: 2)
 
 def buildApp(Client p){
-    println "le clien est ${p.getName()}"
-    println "building the application"
+    echo "le clien est ${p.getName()}"
+    echo "building the application"
 }
 
 def testApp(){
-    println 'Testying the application'
+    echo 'Testying the application'
 }
 
 def deployApp(){
-    println 'deploying the application'
-    println "deploying version: ${params.VERSION}"
+    echo 'deploying the application'
+    echo "deploying version: ${params.VERSION}"
 }
 
 //buildApp(person)
