@@ -1,5 +1,13 @@
+
+class Client {                                  
+    String name
+    Integer age
+}
+def person = new client(name: 'Betclic', age: 2)
+
 def buildApp(){
-    echo 'building the application'
+    println "Hello from the shebang ${person.name}"
+    echo "building the application
 }
 
 def testApp(){
@@ -10,4 +18,5 @@ def deployApp(){
     echo 'deploying the application'
     echo "deploying version: ${params.VERSION}"
 }
+
 return this
